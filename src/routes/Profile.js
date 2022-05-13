@@ -4,7 +4,11 @@ import React from "react";
 
 function Profile() {
   const history = useHistory();
-  const onLogOutClick = () => authService.signOut();
+  const onLogOutClick = () => {
+    authService.signOut();
+    history.push("/");
+  };
+
   return (
     <>
       <button onClick={onLogOutClick}>Log out</button>
