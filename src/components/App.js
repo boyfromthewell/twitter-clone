@@ -19,6 +19,7 @@ function App() {
         });
       } else {
         setIsLogin(false);
+        setUserObj(null);
       }
       setInit(true);
     });
@@ -44,7 +45,9 @@ function App() {
       ) : (
         "Initializing..."
       )}
-      <footer>&copy;{new Date().getFullYear()} Switter</footer>
+      <footer>
+        <div className="footer">&copy;{new Date().getFullYear()} Switter</div>
+      </footer>
     </>
   );
 }
